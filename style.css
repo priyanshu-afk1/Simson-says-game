@@ -1,0 +1,235 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #3b3b6d;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#muteButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the How to Play button */
+#howToPlayButton {
+    position: fixed;
+    top: 60px; /* Adjusts position below the mute/unmute button */
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Overlay styling for the How to Play description */
+#howToPlayOverlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Centered text box styling */
+#howToPlayText {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the close button within the overlay */
+#closeButton {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.game-container {
+    justify-content: center;
+    background-color: #2b2b4f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #00d4ff;
+}
+
+/* Button Container */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Game Buttons */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 15%;
+    border: 5px solid #1a1a2e;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+
+/* Button Colors */
+.yellow {
+    background-color:#f99b45;
+}
+
+.red {
+    background-color:#d95980;
+}
+
+.purple {
+    background-color:#819ff9;
+}
+
+.green {
+    background-color:#63aac0;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Flashing Animation */
+.flash {
+    animation: flash 0.25s;
+}
+
+@keyframes flash {
+    0% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+/* User Click Animation */
+.userFlash {
+    background-color: #a1eafb;
+    animation: userFlash 0.25s ease;
+}
+
+@keyframes userFlash {
+    0% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+/* Game Over Background Animation */
+body.game-over {
+    background-color: #ff4d4d;
+    animation: gameOver 0.15s;
+}
+
+@keyframes gameOver {
+    0% {
+        background-color: #ff4d4d;
+    }
+    100% {
+        background-color: #1a1a2e;
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .btn-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .btn {
+        height: 150px;
+        width: 150px;
+        font-size: 1.5rem;
+    }
+}
+h1, h2 {
+    background-color: #1a1a3d;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 0.5rem;
+}
+
+body, button, h1, h2, .btn, #howToPlayText, #howToPlayButton, #closeButton {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-weight: 600; /* Bolder weight for headings */
+}

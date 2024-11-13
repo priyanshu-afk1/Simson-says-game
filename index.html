@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon says game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="game-container"> 
+        <button id="muteButton"><i class="fa-solid fa-volume-high"></i></button>
+
+        <button id="howToPlayButton">How to Play</button>
+<div id="howToPlayOverlay">
+    <div id="howToPlayText">
+        <p>Welcome to Simon Says! Follow the color patterns and repeat them by clicking the buttons in the correct order. As you progress, the sequence will get longer. See how many you can remember! Press any key to start. <br> Good luck!</p>
+        <button id="closeButton">Close</button>
+    </div>
+</div>
+
+
+        <audio id="gameMusic" src="./game-music.mp3"  loop></audio>
+        <audio id="gameOver" src="./game-over.wav" ></audio>
+
+     <h1>Simon says Game</h1>
+     <h2>Press any key to start</h2>
+     <div class="btn-container">
+        <div class="line-one">
+            <div class="btn red" type="button" id="red">1</div>
+            <div class="btn yellow" type="button" id="yellow">2</div>
+        </div>
+        <div class="lne-two">
+            <div class="btn green" type="button" id="green">3</div>
+            <div class="btn purple" type="button" id="purple">4</div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
